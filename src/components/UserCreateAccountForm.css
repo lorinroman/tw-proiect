@@ -1,0 +1,70 @@
+.user-create-account-form {
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(104, 158, 111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+  }
+  
+  body{
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(37, 110, 61), rgb(25, 71, 170));
+  }
+
+  .user-create-account-form .username {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-create-account-form .password {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-create-account-form .fullName {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-create-account-form .type {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-create-account-form .add {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#btnAdd,#btnLogin{
+    background-color: rgb(29, 54, 33);
+    color:white;
+}
+

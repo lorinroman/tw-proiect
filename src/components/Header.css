@@ -1,0 +1,10 @@
+.header{
+    size:50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+    color:rgb(90, 151, 179);
+}
