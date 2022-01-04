@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 
 import './UserList.css'
-import User from './User'
+
 import UserCreateAccountForm from './UserCreateAccountForm'
 
 
-const SERVER = 'http://localhost:3000'
+const SERVER = 'http://localhost:8080'
 
 function UserList (props) {
     const [users, setUsers] = useState([])
@@ -15,6 +15,7 @@ function UserList (props) {
       const data = await response.json()
       setUsers(data)
     }
+
   
     const addUser = async (user) => {
       await fetch(`${SERVER}/users`, {
@@ -32,12 +33,13 @@ function UserList (props) {
     }, [])
   
     return (
-      <div className='user-list'>
-        {
-          users.map(e => <User key={e.id} item={e} />)
-        }
+    
+      <div className='user-list'>        {
+    //   users.map(e => <User key={e.id} item={e} />)
+       }
         <UserCreateAccountForm onAdd={addUser} />
       </div>
+      
     )
   }
   

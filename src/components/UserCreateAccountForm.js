@@ -18,6 +18,7 @@ function UserCreateAccountForm(props){
 
   const addUser = (evt) => {
     console.warn('called')
+    alert('User created')
     onAdd({
       username,
       password,
@@ -54,10 +55,6 @@ function UserCreateAccountForm(props){
       </div>
       <div className='add'>
         <input type='button' id='btnAdd' value='Create Account' onClick={addUser} />
-      </div>
-      <div className='switch-to-login'>
-        <text>Already existing user? </text>
-        <input type='button' id='btnLogin' value='Log in'/>
       </div>
     </div>
     </body>

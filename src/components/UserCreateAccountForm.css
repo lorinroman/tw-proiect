@@ -20,7 +20,6 @@
   
   body{
     height: 100vh;
-    background: linear-gradient(to bottom right, rgb(37, 110, 61), rgb(25, 71, 170));
   }
 
   .user-create-account-form .username {

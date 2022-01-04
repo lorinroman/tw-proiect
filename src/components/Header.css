@@ -7,4 +7,14 @@
     flex-flow: row wrap;
     padding: 10px;
     color:rgb(90, 151, 179);
+    
 }
+.title{
+    padding-top: 90px;
+    position: absolute;
+}
+.switch-to-login{
+    padding-top: 1300px;
+    position: absolute;
+}
+

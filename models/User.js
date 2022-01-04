@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize');
-const sequelize = require('./Database/sequelize');
+const sequelize = require('../sequelize');
 
 const User = sequelize.define('User', {
     id:{
@@ -20,8 +20,9 @@ const User = sequelize.define('User', {
         allowNull:false
     },
     type: {
-        type: Sequelize.ENUM,
+        type:DataTypes.ENUM,
         values: ['student', 'professor']
     }
 })
 
+module.exports = User;

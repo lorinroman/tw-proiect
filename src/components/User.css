@@ -1,0 +1,27 @@
+.user{
+    border-radius: 25px;
+    height: 55px;
+    width: 120px;
+    background-color: rgb(104, 158, 111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 20px;
+    padding:20px;
+    margin-right:10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.user .username{
+    margin:1px;
+}
+
+.user .fullName{
+    margin:2px;
+}
+
+.user .type{
+    margin:2px;
+}
