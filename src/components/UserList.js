@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './UserList.css'
-
+import User from './User'
 import UserCreateAccountForm from './UserCreateAccountForm'
 
 
@@ -16,7 +16,6 @@ function UserList (props) {
       setUsers(data)
     }
 
-  
     const addUser = async (user) => {
       await fetch(`${SERVER}/users`, {
         method: 'post',
@@ -35,7 +34,7 @@ function UserList (props) {
     return (
     
       <div className='user-list'>        {
-    //   users.map(e => <User key={e.id} item={e} />)
+       users.map(e => <User key={e.id} item={e} />)
        }
         <UserCreateAccountForm onAdd={addUser} />
       </div>
@@ -43,5 +42,6 @@ function UserList (props) {
     )
   }
   
+
   export default UserList
   
