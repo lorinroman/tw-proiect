@@ -9,11 +9,15 @@ const Project = sequelize.define('Project',{
         autoIncrement: true
     },
     name:DataTypes.STRING,
-    deadlineIds:{
+    deadlineDate:DataTypes.DATE
+    
+    /*deadlineIds:{
         type:DataTypes.ARRAY(DataTypes.INTEGER)
     },
     hasMark:DataTypes.BOOLEAN,
     memberIds:{
         type:DataTypes.ARRAY(DataTypes.INTEGER)
-    }
+    }*/
 })
+
+module.exports = Project

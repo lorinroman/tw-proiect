@@ -1,47 +1,39 @@
 import React from 'react'
 import { useState } from 'react'
+import HeadersStudent from './HeadersStudent'
 import './UserLoginForm.css'
 
 
-const UserLoginForm = () => {
+const SERVER = 'http://localhost:8080'
+
+function UserLoginForm(props) {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [user, setUser] = useState([])
-
-    const SERVER = 'http://localhost:8080'
-
-    /*var data = { username: username };
-    var url = new URL("http://localhost:8080/users");
-    for (let k in data) { url.searchParams.append(k, data[k]); }*/
+    
+    const [showStudentHeaders, setShowStudentHeaders] = useState(false)
 
 
-
-    const getUser = async ()=> {
-      
-        const response = fetch(`${SERVER}/users?username=${username}`)
+    const logUser = async()=> {
+        const response = await fetch(`${SERVER}/users?username=${username}`)
         const data = await response.json()
 
-        //fetch(url)
-        setUser(data);
-        
-    }
-
-
-    function logUser() {
-        getUser()
-        if (user.password == password) {
+        if (data && data[0].password == password) {
             alert('Successfully logged in')
+            setShowStudentHeaders(!showStudentHeaders)
         }
         else {
             alert('Wrong password')
+            setShowStudentHeaders(showStudentHeaders)
+            
         }
     }
 
-
+ 
     return (
+    
         <body>
-            <div className='user-login-form'>
+            {!showStudentHeaders &&<div className='user-login-form'>
                 <div className='username'>
                     <text id='text1'>Username:</text>
                     <input type='text' placeholder='username' onChange={(evt) => setUsername(evt.target.value)} />
@@ -53,6 +45,10 @@ const UserLoginForm = () => {
                 <div className='LoginUser'>
                     <input type='button' id='btnLoginUser' onClick={logUser} value='Log in' />
                 </div>
+            </div>}
+            
+            <div>
+                {showStudentHeaders && <HeadersStudent/>}
             </div>
         </body>
     )
